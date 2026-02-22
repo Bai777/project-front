@@ -1,0 +1,248 @@
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 30px;
+    min-height: 100vh;
+    color: #2d3748;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 700;
+    background: linear-gradient(45deg, #f6d5f7, #fbe9d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #fff;
+    font-weight: 500;
+    border-left: 6px solid #ff6b6b;
+    padding-left: 15px;
+    margin-top: 40px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+label[for="countPerPages"] {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-right: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#countPerPages {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.9);
+    font-size: 1em;
+    font-weight: 500;
+    color: #2d3748;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#countPerPages:hover {
+    background: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+#players-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    margin: 25px 0;
+    font-size: 0.95em;
+    backdrop-filter: blur(5px);
+}
+
+#players-table thead {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    color: white;
+}
+
+#players-table th {
+    padding: 16px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+#players-table th:last-child {
+    border-right: none;
+}
+
+#players-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: rgba(255,255,255,0.9);
+    transition: background-color 0.3s;
+}
+
+#players-table tbody tr:nth-child(even) td {
+    background-color: rgba(245, 247, 250, 0.9);
+}
+
+#players-table tbody tr:hover td {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    cursor: default;
+}
+
+#players-table td button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#players-table td button:hover {
+    background: rgba(52, 152, 219, 0.2);
+    transform: scale(1.2);
+}
+
+#players-table td img {
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+}
+
+#paging_buttons {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#paging_buttons button {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border: none;
+    color: white;
+    min-width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+}
+
+#paging_buttons button:hover {
+    background: linear-gradient(135deg, #2980b9, #1c6ea9);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+#paging_buttons button[style*="color: red"] {
+    background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+    color: white !important;
+    border: 2px solid #f1c40f !important;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #f1c40f;
+}
+
+br {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1em;
+    width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    border: 2px solid transparent;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #f1c40f;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+    outline: none;
+    transform: scale(1.02);
+}
+
+button[onclick="createAccount()"] {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border: none;
+    color: white;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.4);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button[onclick="createAccount()"]:hover {
+    background: linear-gradient(135deg, #27ae60, #1e8449);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(46, 204, 113, 0.6);
+    border-color: #f1c40f;
+}
+
+hr {
+    border: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff6b6b, #feca57, #48dbfb, transparent);
+    margin: 40px 0;
+    border-radius: 3px;
+}
